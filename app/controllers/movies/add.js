@@ -15,6 +15,7 @@ export default class MoviesAddController extends Controller {
     const newMovie = this.store.createRecord('movie', {
       title,
       description,
+      rating,
     });
 
     // Save to DB
@@ -24,6 +25,7 @@ export default class MoviesAddController extends Controller {
     this.setProperties({
       title: '',
       description: '',
+      rating: '',
     });
 
     console.log(this.store.findAll('movie'));

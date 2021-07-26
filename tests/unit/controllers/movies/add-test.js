@@ -9,4 +9,15 @@ module('Unit | Controller | movies/add', function (hooks) {
     let controller = this.owner.lookup('controller:movies/add');
     assert.ok(controller);
   });
+
+  test('addMovie works', function (assert) {
+    let controller = this.owner.lookup('controller:movies/add');
+    let model = run(() =>
+      this.store.createRecord('movie', {
+        title: 'Movie title',
+        description: 'Movie description',
+      })
+    );
+    assert.ok(model.save(), 'data is saved');
+  });
 });

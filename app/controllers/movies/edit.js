@@ -7,13 +7,13 @@ export default class MoviesEditController extends Controller {
     let self = this;
     let title = this.model.title;
     let description = this.model.description;
-
-    console.log(title);
+    let rating = this.model.rating;
 
     // Edit movie
     this.store.findRecord('movie', id).then((curr) => {
       curr.set('title', title);
       curr.set('description', description);
+      curr.set('rating', rating);
 
       // Save to DB
       curr.save();

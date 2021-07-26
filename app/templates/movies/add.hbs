@@ -7,5 +7,8 @@
   <div class="mb-3">
     {{textarea class="form-control" value=description placeholder="Describe your movie.."}}
   </div>
+  <div class="mb-3">
+    {{input type="number" class="form-control" value=rating placeholder="Rating.." min="1" max="10"}}
+  </div>
   <button {{action 'saveMovie'}} type="submit" class="btn btn-primary">Submit</button>
 </form>

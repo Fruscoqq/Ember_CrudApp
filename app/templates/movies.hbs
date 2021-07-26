@@ -3,14 +3,14 @@
 {{outlet}}
 <h3 class="py-3">Current list of movies</h3>
 {{#each model as |movie|}}
-<div class="item card my-3">
+<div class="item card bg-light my-3">
     <div class="card-body">
-        <h4>Movie name: {{movie.title}}</h4>
+        <h4 class="fw-light">Movie name: <span class="fw-bolder">{{movie.title}}</span></h4>
         <p class="lead">Description: {{movie.description}}</p>
-        {{#link-to 'movies.edit' movie.id}} <button class="btn btn-warning text-light"><i class="fas fa-edit"></i> Edit</button>{{/link-to}}
-        <button {{action 'deleteMovie' movie.id}} class="btn btn-danger "><i class="fas fa-trash"></i> Delete</button>
+        <p class="lead">Rating: {{movie.rating}}</p>
+        {{#link-to 'movies.edit' movie.id}} <button class="btn btn-warning text-light" type="button"><i class="fas fa-edit"></i> Edit</button>{{/link-to}}
+        <button class="btn btn-danger " type="button" {{action 'deleteMovie' movie.id}}><i class="fas fa-trash"></i> Delete</button>
     </div>
 </div>
 {{/each}}
 
-<h1>Movies page</h1>

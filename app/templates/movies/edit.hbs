@@ -9,6 +9,9 @@
   <div class="mb-3">
     {{textarea class="form-control" value=model.description placeholder="Describe your movie.."}}
   </div>
+  <div class="mb-3">
+    {{input type="number" class="form-control" value=model.rating placeholder="Rate your movie.."}}
+  </div>
   <button {{action 'editMovie' model.id}} type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
