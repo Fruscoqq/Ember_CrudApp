@@ -4,6 +4,16 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'crud-app',
     environment,
+    firebase: {
+      apiKey: 'AIzaSyCTQKwKL06Gm1Y7HGaVBn8sR9i9GDPbRxs',
+      authDomain: 'moviesdb-7b6e1.firebaseapp.com',
+      databaseURL: '',
+      projectId: 'moviesdb-7b6e1',
+      storageBucket: 'moviesdb-7b6e1.appspot.com',
+      messagingSenderId: '1032362944217',
+      appId: '1:1032362944217:web:2649af353713c38e21c0c8',
+      measurementId: 'G-HY087YGB8J',
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

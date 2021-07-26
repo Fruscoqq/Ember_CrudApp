@@ -1,0 +1,13 @@
+{{page-title "Movies"}}
+
+{{outlet}}
+{{#each model as |movie|}}
+<div class="item card my-3">
+    <div class="card-body">
+        <h4>Movie name: {{movie.title}}</h4>
+        <p>Description: {{movie.description}}</p>
+    </div>
+</div>
+{{/each}}
+
+<h1>Movies page</h1>

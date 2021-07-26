@@ -1,0 +1,10 @@
+{{page-title "Add"}}
+<form>
+  <div class="mb-3">
+    {{input type="text" class="form-control" value=title placeholder="Add Movie.."}}
+  </div>
+  <div class="mb-3">
+    {{textarea class="form-control" value=description placeholder="Describe your movie.."}}
+  </div>
+  <button {{action 'saveMovie'}} type="submit" class="btn btn-primary">Submit</button>
+</form>
