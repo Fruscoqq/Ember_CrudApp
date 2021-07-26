@@ -14,7 +14,7 @@ In order to successfully run this app you will need to have these things on your
 Instalation
 
 * `git clone <repository-url>` this repository
-* `cd crud-app`
+* `cd Ember_CrudApp`
 * `npm install`
 
 ## Running / Development
