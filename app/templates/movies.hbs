@@ -1,11 +1,14 @@
 {{page-title "Movies"}}
 
 {{outlet}}
+<h3 class="py-3">Current list of movies</h3>
 {{#each model as |movie|}}
 <div class="item card my-3">
     <div class="card-body">
         <h4>Movie name: {{movie.title}}</h4>
-        <p>Description: {{movie.description}}</p>
+        <p class="lead">Description: {{movie.description}}</p>
+        {{#link-to 'movies.edit' movie.id}} <button class="btn btn-warning text-light"><i class="fas fa-edit"></i> Edit</button>{{/link-to}}
+        <button {{action 'deleteMovie' movie.id}} class="btn btn-danger "><i class="fas fa-trash"></i> Delete</button>
     </div>
 </div>
 {{/each}}

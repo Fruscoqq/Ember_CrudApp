@@ -6,6 +6,7 @@ export default class MoviesAddController extends Controller {
   saveMovie() {
     let title = this.title;
     let description = this.description;
+    let rating = this.rating;
 
     console.log(title);
 

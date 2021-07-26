@@ -9,5 +9,6 @@ export default class Router extends EmberRouter {
 Router.map(function () {
   this.route('movies', function () {
     this.route('add');
+    this.route('edit', { path: '/edit/:movie_id' });
   });
 });
